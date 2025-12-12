@@ -1,8 +1,8 @@
 // Configurações iniciais
 const cfg = {
   winShortMs: 180_000,
-  upThresholdPct: 1.5,
-  downThresholdPct: 1.5,
+  upThresholdPct: 0.5,
+  downThresholdPct: 0.5,
   maxStretchPct: 4,
   minUsd24h: 5_000_000,
 };
@@ -246,3 +246,4 @@ window.addEventListener('DOMContentLoaded', () => {
   startFeed();
   startLoops();
 });
+
