@@ -1,6 +1,6 @@
 // Configurações iniciais
 const cfg = {
-  winShortMs: 60_000,
+  winShortMs: 180_000,
   upThresholdPct: 0.5,
   downThresholdPct: 0.5,
   maxStretchPct: 4,
