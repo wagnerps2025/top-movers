@@ -1,0 +1,15 @@
+{
+  "name": "top-movers",
+  "version": "1.0.0",
+  "description": "Painel web em tempo real para detectar movimentos acelerados de pares USDT na Binance.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Wagner",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

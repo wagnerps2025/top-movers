@@ -1,0 +1,26 @@
+# OS/Editor
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Builds (se usar bundlers futuramente)
+dist/
+build/
+
+# Node (caso venha a usar pacotes)
+node_modules/
+
+# Ambientes
+.env
+
+# Node
+node_modules/
+npm-debug.log
+.env
+
+# OS/Editor
+.DS_Store
+Thumbs.db

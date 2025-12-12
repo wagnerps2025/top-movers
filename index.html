@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Movers — Varredura em tempo real</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Top Movers — Oportunidades de Momento</h1>
+    <p class="subtitle">
+      Varre todos os pares. Destaca ascensão/descenso rápidos. Mostra quando é viável entrar — e quando não é.
+    </p>
+
+    <div class="controls">
+      <label>
+        Janela curta:
+        <select id="winShort">
+          <option value="60000">1 min</option>
+          <option value="120000">2 min</option>
+          <option value="180000" selected>3 min</option>
+        </select>
+      </label>
+      <label>
+        Limiar subida (%):
+        <input id="thUp" type="number" step="0.1" value="1.5" />
+      </label>
+      <label>
+        Limiar descida (%):
+        <input id="thDown" type="number" step="0.1" value="1.5" />
+      </label>
+      <label>
+        Máx. esticamento (%):
+        <input id="maxStretch" type="number" step="0.5" value="4" />
+      </label>
+      <label>
+        Mín. liquidez (USD 24h):
+        <input id="minUsd24h" type="number" step="100000" value="5000000" />
+      </label>
+      <button id="applyCfg">Aplicar</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid-panels">
+      <div class="panel">
+        <h2>Top 5 — Ascensão rápida</h2>
+        <table class="movers">
+          <thead>
+            <tr>
+              <th>Par</th><th>Δ 1–3m</th><th>Preço</th><th>Liquidez</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="topUp"></tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Top 5 — Descenso rápido</h2>
+        <table class="movers">
+          <thead>
+            <tr>
+              <th>Par</th><th>Δ 1–3m</th><th>Preço</th><th>Liquidez</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="topDown"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Alertas recentes</h2>
+      <ul id="alerts"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>Dados públicos da Binance via WebSocket. Este painel não executa ordens; serve para detectar movimento acelerado.</small>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
