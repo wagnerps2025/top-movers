@@ -247,4 +247,8 @@ window.addEventListener('DOMContentLoaded', () => {
   startLoops();
 });
 
-
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js")
+    .then(() => console.log("Service Worker registrado"))
+    .catch((err) => console.error("Erro no SW:", err));
+}
