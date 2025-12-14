@@ -4,7 +4,7 @@ const cfg = {
   upThresholdPct: 0.5,
   downThresholdPct: 0.5,
   maxStretchPct: 4,
-  minUsd24h: 5_000_000,
+  minUsd24h: 15_000_000,
 };
 
 // Estado em memória
@@ -252,3 +252,4 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("Service Worker registrado"))
     .catch((err) => console.error("Erro no SW:", err));
 }
+
